@@ -1,5 +1,5 @@
-<html lang="es">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
-
 <body>
-    {% block contenido %}
-    {% endblock contenido %}
+    <header>
+        <h1>Gestión de Obras Sociales</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="{% url 'agregar_obra_social' %}">Agregar Obra Social</a>
+            <a href="{% url 'agregar_plan_salud' %}">Agregar Plan de Salud</a>
+            <a href="{% url 'agregar_afiliado' %}">Agregar Afiliado</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestión de OOSS</p>
+    </footer>
 </body>
-
 </html>

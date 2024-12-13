@@ -1,0 +1,10 @@
+{% extends 'ooss/base.html' %}
+
+{% block content %}
+  <h1>Bienvenido al Sistema de Gestión de OOSS</h1>
+  <ul>
+    <li><a href="{% url 'agregar_obra_social' %}">Agregar Obra Social</a></li>
+    <li><a href="{% url 'agregar_plan_salud' %}">Agregar Plan de Salud</a></li>
+    <li><a href="{% url 'agregar_afiliado' %}">Agregar Afiliado</a></li>
+  </ul>
+{% endblock %}

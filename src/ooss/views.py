@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import ObraSocialForm, PlanSaludForm, AfiliadoForm
 
+def index(request):
+    return render(request, 'ooss/index.html') 
+
 def agregar_obra_social(request):
     if request.method == "POST":
         form = ObraSocialForm(request.POST)
