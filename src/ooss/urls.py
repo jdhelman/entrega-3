@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import index, about
+from . import views
 
 urlpatterns = [
-    path("", index, name="index"),
-    path("about/", about ,name="about"),
+    path('agregar-obra-social/', views.agregar_obra_social, name='agregar_obra_social'),
+    path('agregar-plan-salud/', views.agregar_plan_salud, name='agregar_plan_salud'),
+    path('agregar-afiliado/', views.agregar_afiliado, name='agregar_afiliado'),
 ]
