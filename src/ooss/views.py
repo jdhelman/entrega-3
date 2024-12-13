@@ -9,7 +9,7 @@ def agregar_obra_social(request):
         form = ObraSocialForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = ObraSocialForm()
     return render(request, 'ooss/agregar_obra_social.html', {'form': form})
@@ -20,7 +20,7 @@ def agregar_plan_salud(request):
         form = PlanSaludForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = PlanSaludForm()
     return render(request, 'ooss/agregar_plan_salud.html', {'form': form})
@@ -31,7 +31,7 @@ def agregar_afiliado(request):
         form = AfiliadoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = AfiliadoForm()
     return render(request, 'ooss/agregar_afiliado.html', {'form': form})
